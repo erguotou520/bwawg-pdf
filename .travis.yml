@@ -15,7 +15,7 @@ script:
   - git init
   - git add -A
   - git commit -m "Auto commit"
-  - git push -u https://$GH_TOKEN@github.com/erguotou520/bwawg-pdf.git HEAD:pdf --force
+  - git push -u https://$GH_TOKEN@github.com/erguotou520/bwawg-pdf.git HEAD:gh-pages --force
 cache:
   directories:
     - node_modules
