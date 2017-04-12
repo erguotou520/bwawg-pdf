@@ -56,13 +56,13 @@ function generate (lang) {
             outputDirectory: path.join(__dirname, 'pdf'),
             outputFilename: `bwawg-${lang}.pdf`
           })
-          render.renderFile(mdFile, function (err) {
+          render.renderFile(mdFile, function (err, filename) {
             if (err) {
               log("Error while rendering: " + err)
               resolve()
             }
             else {
-              log(`bwawg-${lang}.pdf generated`)
+              log(`${filename} generated`)
               resolve()
             }
           })
