@@ -53,7 +53,8 @@ function generate (lang) {
             return resolve()
           }
           var render = new yamp.renderers.pdf({
-            outputFilename: path.join(__dirname, `pdf/bwawg-${lang}.pdf`)
+            outputDirectory: path.join(__dirname, 'pdf'),
+            outputFilename: `bwawg-${lang}.pdf`
           })
           render.renderFile(mdFile, function (err) {
             if (err) {
