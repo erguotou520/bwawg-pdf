@@ -1,0 +1,23 @@
+language: node_js
+node_js:
+  - "6"
+before_install:
+  - git config --global push.default matching
+  - git config --global user.name "erguotou"
+  - git config --global user.email "erguotou525@gmail.com"
+install:
+  - npm i -g phantomjs-prebuilt cnpm
+  - cnpm install
+script:
+  - npm run build
+  - cd pdf
+  - ls
+  - git init
+  - git add -A
+  - git commit -m "Auto commit"
+  - git push -u https://$GH_TOKEN@github.com/erguotou520/bwawg-pdf.git HEAD:pdf --force
+cache:
+  directories:
+    - node_modules
+    - $(npm config get prefix)/phantomjs-prebuilt
+    - $(npm config get prefix)/cnpm

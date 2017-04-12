@@ -1,0 +1,20 @@
+{
+  "name": "bwawg-pdf",
+  "version": "0.0.1",
+  "description": "Auto generate pdf for astaxie/build-web-application-with-golang document",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf md pdf&&mkdir md pdf&&node index.js"
+  },
+  "keywords": [
+    "pdf",
+    "go"
+  ],
+  "author": "erguotou525@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "request": "^2.81.0",
+    "request-promise": "^4.2.0",
+    "yamp": "^0.4.2"
+  }
+}
