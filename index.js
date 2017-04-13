@@ -45,6 +45,10 @@ function generate (lang) {
         // all chapters downloaded
         log(`Lang ${lang} all chapters fetched`)
         var str = `${replacedPreface}\n\n${contents.join('\n\n')}`
+        // debug
+        if (lang === 'zh') {
+          console.log(str)
+        }
         var mdFile = path.join(__dirname, `md/${lang}.md`)
         log(`Converting lang ${lang} to pdf`)
         fs.writeFile(mdFile, str, (err) => {
